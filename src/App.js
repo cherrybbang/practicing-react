@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import one from './assets/1.jpg';
+import two from './assets/2.jpg';
+import three from './assets/3.jpg';
+import four from './assets/4.jpg';
+import five from './assets/5.jpg';
+import ImgSlider from './components/imgSlider';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const images = [one, two, three, four, five];
+    const intervalTime = 3000;
+
+    return (
+        <div>
+            <ImgSlider images={images} intervalTime={intervalTime}></ImgSlider>
+        </div>
+    )
 }
 
 export default App;

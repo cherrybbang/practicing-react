@@ -1,0 +1,11 @@
+.slide_wrap {
+    width: 1000px; height: 500px;
+    margin: 0 auto;
+}
+.slide_group {
+    width: 700px;
+    margin: 50px auto 0;
+}
+img {
+    width: 100%;
+}

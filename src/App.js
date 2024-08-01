@@ -11,7 +11,7 @@ function App() {
 
     return (
         <div>
-            <ImgSlider images={images} intervalTime={intervalTime}></ImgSlider>
+            <ImgSlider image={images} intervalTime={intervalTime}></ImgSlider>
         </div>
     )
 }

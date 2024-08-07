@@ -11,7 +11,7 @@ function Effect() {
 
     const variable = 123;
     useEffect(() => {
-        console.log(`on ${variable} update`)
+        console.log(`on ${variable} update`);
     }, [variable])
 }
 

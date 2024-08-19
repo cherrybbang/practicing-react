@@ -1,6 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 8090;
+
+
+// 모든 도메인 허용
+app.use(cors());
+
+// 특정 도메인만 허용
+// app.use(cors({
+//     origin : 'http://localhost:3000',  // 도메인 허용 옵션
+//     credentials : false, // 다른 도메인간 쿠키 공유 허락 옵션  
+// }));
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

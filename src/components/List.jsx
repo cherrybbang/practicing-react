@@ -1,4 +1,5 @@
 import { Link, useNavigate, Navigate } from "react-router-dom";
+import axios from 'axios';
 import Data from './data.jsx';
 
 function List() {
@@ -10,6 +11,13 @@ function List() {
         // useNavigate은 인자를 2개 받는데, 첫번째 인자는 '주소'고, 두번째 인자는 replace이다.
         // replace : true 면, 뒤로가기를 눌러도 직전 페이지로 가는게 아니라 / 로 설정한 페이지로 이동한다. replace : false는 직전 페이지, 뒤로가기가 가능하다.
     };
+
+    const clickForApi = () => {
+        axios.get('http://localhost:8090/content').then(response => {
+            console.log(response);
+            console.log(response.data);
+        })
+    }
 
     // let loginYN = false;
     // if(!loginYN) {
@@ -30,6 +38,9 @@ function List() {
 
             <h1>다른 컴포넌트에서 데이터 불러오기</h1>
             <Data />
+
+            <h1>axios로 api 연동하기</h1>
+            <button onClick={clickForApi}>axios api</button>
         </>
     )
 }
